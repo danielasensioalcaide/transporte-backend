@@ -4,6 +4,10 @@ import os
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
 EMT_STOP = "1574"
 EMT_LINES = {"62", "64", "92"}
 METRO_STATION = "TURIA"
@@ -46,3 +50,4 @@ def tiempos():
             })
 
     return resultado
+
